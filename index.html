@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="tetris/style.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <div class="slides">
+            <section>
+                <h1 style='color:deepskyblue;'>Reveal.js</h1>
+                <h2>Prezentacje od i dla programistów</h2>
+            </section>
+            <section>
+                <h2></h2>
+            </section>
+            <section>
+                <img src="media/trends.jpg"/>
+            </section>
+            <section>
+                <section data-background-color="#0b0b0b">
+                    Dlaczego [ja] nie [lubię]...
+                    <h2 class='fragment grow'><a style='color:#b7472a;' href='http://gist-reveal.it'>PowerPoint?</a>
+                    </h2>
+                </section>
+                <section data-background-color="#0b0b0b">
+                    <h3 class='fragment'><a style='color:#b7472a;' href='http://gist-reveal.it'>PowerPoint...</a>
+                    </h3>
+                    <p class='fragment reveal'>$$$</p>
+                    <p class='fragment reveal'>instalacja</p>
+                    <p class='fragment reveal'>nuda</p>
+                    <p class='fragment reveal' style='color:#2B81AF;'>openoffice/libreoffice</p>
+                </section>
+            </section>
+            <section>
+                <section data-background-color="#000130">
+                    Dlaczego nie...
+                    <h2 class='fragment grow'><a style='color:deepskyblue;' href='http://gist-reveal.it'>Prezi?</a></h2>
+                </section>
+                <section data-background-color="#000130">
+                    <h3 class='fragment'><a style='color:deepskyblue;' href='http://gist-reveal.it'>Prezi...</a></h3>
+                    <p class='fragment reveal' style="text-decoration: line-through">offline</p>
+                    <p class='fragment reveal'>$</p>
+                    <small class="fragment reveal">(zaawansowane opcje prezentera / offline)</small>
+                    <p class='fragment reveal'>rejestracja</p>
+                    <p class='fragment reveal'>klikadło</p>
+                    <p class='fragment reveal'>wodotryski</p>
+                </section>
+            </section>
+            <section>
+                <video>
+                    <source data-src="media/monkey-computer.mp4" type="video/mp4"/>
+                </video>
+            </section>
+            <section>
+                <h1>180<sup>o</sup></h1>
+            </section><!-- ted logo?-->
+            <section>
+                <p class="fragment reveal">utworzenie prezentacji...</p>
+                <p class="fragment reveal">szybko</p>
+                <p class="fragment reveal">żeby jako tako wyglądało</p>
+            </section>
+            <section>
+                <section><img src="media/download.jpg"/></section>
+                <section><img src="media/files.jpg"/></section>
+                <section><img src="media/npminstall.jpg"/></section>
+                <section><img src="media/chrome.jpg"/></section>
+            </section>
+            <section>
+                <pre><code data-trim data-noescape>
+                    &lt;section&gt;Slajd pierwszy&lt;/section&gt;
+                    &lt;section&gt;Slajd drugi&lt;/section&gt;
+                </code></pre>
+            </section>
+            <section>Slajd pierwszy</section>
+            <section>Slajd drugi</section>
+            <section>
+                <pre><code data-trim data-noescape>&lt;section&gt;
+    &lt;section&gt;Slajd pierwszy&lt;/section&gt;
+    &lt;section&gt;Pod slajdem pierwszym&lt;/section&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;section&gt;Slajd drugi&lt;/section&gt;
+    &lt;section&gt;Pod slajdem drugim&lt;/section&gt;
+&lt;/section&gt;                </code></pre>
+            </section>
+            <section>
+                <section>Slajd pierwszy</section>
+                <section>Pod slajdem pierwszym</section>
+            </section>
+            <section>
+                <section>Slajd drugi</section>
+                <section>Pod slajdem drugim</section>
+            </section>
+            <section data-background="media/tvp.jpg">
+                <pre><code><section data-background="media/tvp.jpg">
+    ...
+</section></code></pre>
+            </section>
+            <section>
+                <section>Animacje</section>
+                <section data-transition="slide">
+                    Jest kilka...
+                </section>
+                <section data-transition="convex">
+                    rodzajów
+                </section>
+                <section data-transition="concave  fade-out">
+                    animacji.
+                </section>
+                <section data-transition="fade-in slide-out">
+                    <img src="media/roll.gif">
+                </section>
+                <section data-transition="zoom">
+                    <pre><code><section data-transition="slide">
+    Jest kilka...
+</section>
+<section data-transition="convex">
+    rodzaj&#xF3;w
+</section>
+<section data-transition="concave fade-out">
+    animacji.
+</section>
+<section data-transition="fade-in slide-out">
+    <img src="media/roll.gif">
+</section>
+<section data-transition="zoom">
+    ...
+</section></code></pre>
+                </section>
+            </section>
+            <section>
+                <h2>Notatki prezentera</h2>
+                <h5 style='color:deepskyblue;'>Ukryty panel</h5>
+                <pre><code>&lt;aside class=&quot;notes&quot;&gt;
+    To sa notatki, ktore nie sa widoczne w prezentacji!
+&lt;/aside&gt;</code></pre>
+                <aside class="notes">
+                    To sa notatki, ktore nie sa widoczne w prezentacji!
+                    A szczególnie ten napis.
+                </aside>
+
+                <p class="fragment reveal">skrót klawiaturowy: s</p>
+            </section>
+            <section>
+                <h2>Reveal.js</h2>
+                <h5 style='color:deepskyblue;'>to JavaScript</h5>
+                <p class="fragment reveal">
+                    <iframe src="https://open.spotify.com/embed/album/0XRZpF083HqgygM0v1hQyE" width="300" height="380"
+                            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </p>
+            </section>
+            <section>
+                <section>
+                    <canvas width='300' height='600'></canvas>
+                    <button class="nice-button" id="playbutton" onclick="playButtonClicked();">Zagraj ▶</button>
+                    <p>https://github.com/dionyziz/canvas-tetris</p>
+                </section>
+                <section>
+                    <div class="canvas-container">
+                        <canvas id="canvasBar"></canvas>
+                    </div>
+                    <button class="nice-button" id="randomizeDataBar">Losuj 🎲</button>
+                </section>
+            </section>
+            <section data-background-transition='zoom' data-transition='linear' id='try-it'>
+                <h2>Podsumowanie</h2>
+                <p class="fragment reveal">Nodejs/npm, edytor tekstowy</p>
+                <p class="fragment reveal">podstawowa wiedza o HTML</p>
+                <p class="fragment reveal">szybki start</p>
+                <p class="fragment reveal">all in one</p>
+                <p class="fragment reveal">hackable</p>
+            </section>
+            <section data-markdown data-background-color="#ddd" data-transition='concave'>
+                <textarea data-template>
+                    ## Linki
+                    - Prezentacja wprowadzająca do Reveal.js [https://revealjs.com/#/](https://revealjs.com/#/).
+                    - Reveal.js Github [https://github.com/hakimel/reveal.js/](https://github.com/hakimel/reveal.js/).
+                    - Ta prezentacja do pobrania [https://github.com/piotrkochan/reveal.js](https://github.com/piotrkochan/reveal.js).
+                </textarea>
+            </section>
+            <section>
+                <h1>Dziękuję za uwagę</h1>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        hash: true,
+        minScale: 0.2,
+        maxScale: 1.5,
+        autoPlayMedia: true,
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/highlight/highlight.js', async: true},
+            {src: 'plugin/highlight/highlight.js'},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+</script>
+<script src='tetris/js/tetris.js'></script>
+<script src='tetris/js/controller.js'></script>
+<script src='tetris/js/render.js'></script>
+
+<script src='media/chart/utils.js'></script>
+<script src='media/chart/bar.js'></script>
+<script src='media/chart/circle.js'></script>
+</body>
+</html>
