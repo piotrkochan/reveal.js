@@ -30,7 +30,7 @@
         <div class="slides">
             <section>
                 <h1 style='color:deepskyblue;'>Reveal.js</h1>
-                <h2>Prezentacje od i dla programistów</h2>
+                <h2>Prezentacje od programisty</h2>
             </section>
             <section>
                 <h2></h2>
@@ -60,9 +60,11 @@
                 </section>
                 <section data-background-color="#000130">
                     <h3 class='fragment'><a style='color:deepskyblue;' href='http://gist-reveal.it'>Prezi...</a></h3>
-                    <p class='fragment reveal' style="text-decoration: line-through">offline</p>
+                    <p class='fragment reveal' style="text-decoration: line-through; font-size: 40%">offline</p>
                     <p class='fragment reveal'>$</p>
-                    <small class="fragment reveal">(zaawansowane opcje prezentera / offline)</small>
+                    <small class="fragment reveal">
+                        <blockquote>(zaawansowane opcje prezentera / offline)</blockquote>
+                    </small>
                     <p class='fragment reveal'>rejestracja</p>
                     <p class='fragment reveal'>klikadło</p>
                     <p class='fragment reveal'>wodotryski</p>
@@ -113,13 +115,13 @@
                 <section>Slajd drugi</section>
                 <section>Pod slajdem drugim</section>
             </section>
-            <section data-background="media/tvp.jpg">
-                <pre><code><section data-background="media/tvp.jpg">
+            <section data-background="media/tvpis.jpg">
+                <pre><code><section data-background="media/tvpis.jpg">
     ...
 </section></code></pre>
             </section>
             <section>
-                <section>Animacje</section>
+                <section><h2>Animacje</h2></section>
                 <section data-transition="slide">
                     Jest kilka...
                 </section>
@@ -151,8 +153,8 @@
                 </section>
             </section>
             <section>
-                <h2>Notatki prezentera</h2>
-                <h5 style='color:deepskyblue;'>Ukryty panel</h5>
+                <h2>Panel prezentera</h2>
+                <h5 style='color:deepskyblue;'>Dostępny w osobnym oknie</h5>
                 <pre><code>&lt;aside class=&quot;notes&quot;&gt;
     To sa notatki, ktore nie sa widoczne w prezentacji!
 &lt;/aside&gt;</code></pre>
@@ -160,8 +162,11 @@
                     To sa notatki, ktore nie sa widoczne w prezentacji!
                     A szczególnie ten napis.
                 </aside>
-
-                <p class="fragment reveal">skrót klawiaturowy: s</p>
+                <blockquote class="fragment reveal">skrót klawiaturowy: s</blockquote>
+            </section>
+            <section>
+                <h5>Przeglad slajdów</h5>
+                <blockquote class="fragment reveal">skrót klawiaturowy: esc</blockquote>
             </section>
             <section>
                 <h2>Reveal.js</h2>
@@ -184,20 +189,67 @@
                     <button class="nice-button" id="randomizeDataBar">Losuj 🎲</button>
                 </section>
             </section>
+            <section>
+                <h3 style='color:deepskyblue;'>Formatowanie</h3>
+                <img id="gopher" src="media/gopher.png"/>
+                <h4>I kolorowanie składni kodu</h4>
+                <pre><code>package main
+
+import (
+	"fmt"
+)
+
+func fibonacci(n int, c chan int) {
+	x, y := 1, 1
+	for i := 0; i < n; i++ {
+		c <- x
+		x, y = y, x+y
+	}
+	close(c)
+}
+
+func main() {
+	c := make(chan int, 10)
+	go fibonacci(cap(c), c)
+	for i := range c {
+		fmt.Println(i)
+	}
+}</code></pre>
+            </section>
+            <section>
+                <h4 style='color:deepskyblue;'>Układ Lorenza</h4>
+
+                \[\begin{aligned}
+                \dot{x} &amp; = \sigma(y-x) \\
+                \dot{y} &amp; = \rho x - y - xz \\
+                \dot{z} &amp; = -\beta z + xy
+                \end{aligned} \]
+
+                <h4 style='color:deepskyblue;'>Nierówność Cauchy’ego-Schwarza</h4>
+
+                <script type="math/tex; mode=display">
+					\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+
+                </script>
+            </section>
+            <section>
+                <h4>Generowanie pdf</h4>
+                <a href="/?print-pdf">click</a>
+            </section>
             <section data-background-transition='zoom' data-transition='linear' id='try-it'>
                 <h2>Podsumowanie</h2>
-                <p class="fragment reveal">Nodejs/npm, edytor tekstowy</p>
+                <p class="fragment reveal">NodeJS/npm, edytor tekstowy</p>
                 <p class="fragment reveal">podstawowa wiedza o HTML</p>
                 <p class="fragment reveal">szybki start</p>
                 <p class="fragment reveal">all in one</p>
                 <p class="fragment reveal">hackable</p>
             </section>
-            <section data-markdown data-background-color="#ddd" data-transition='concave'>
+            <section data-markdown data-background-color="#1a1a1a" data-transition='concave'>
                 <textarea data-template>
                     ## Linki
-                    - Prezentacja wprowadzająca do Reveal.js [https://revealjs.com/#/](https://revealjs.com/#/).
-                    - Reveal.js Github [https://github.com/hakimel/reveal.js/](https://github.com/hakimel/reveal.js/).
-                    - Ta prezentacja do pobrania [https://github.com/piotrkochan/reveal.js](https://github.com/piotrkochan/reveal.js).
+                    - Prezentacja wprowadzająca do Reveal.js [https://revealjs.com/#/](https://revealjs.com/#/)
+                    - Reveal.js Github [https://github.com/hakimel/reveal.js/](https://github.com/hakimel/reveal.js/)
+                    - Ta prezentacja do pobrania [https://github.com/piotrkochan/reveal.js](https://github.com/piotrkochan/reveal.js)
                 </textarea>
             </section>
             <section>
@@ -219,11 +271,18 @@
         minScale: 0.2,
         maxScale: 1.5,
         autoPlayMedia: true,
+        math: {
+            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+            config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+            // pass other options into `MathJax.Hub.Config()`
+            TeX: {Macros: {RR: "{\\bf R}"}}
+        },
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},
             {src: 'plugin/highlight/highlight.js', async: true},
             {src: 'plugin/highlight/highlight.js'},
+            {src: 'plugin/math/math.js', async: true},
             {src: 'plugin/notes/notes.js', async: true}
         ]
     });

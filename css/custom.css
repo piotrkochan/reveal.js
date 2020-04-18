@@ -34,3 +34,12 @@
   margin: auto;
   width: 50%;
 }
+
+#gopher {
+  background: none;
+  border: 0;
+  position: absolute;
+  width: 150px;
+  right: 5%;
+  top: 15%;
+}
