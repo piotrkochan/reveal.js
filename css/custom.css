@@ -43,3 +43,14 @@
   right: 5%;
   top: 15%;
 }
+
+#author {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: "Montserrat", Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 14px;
+  color: #404040;
+}
